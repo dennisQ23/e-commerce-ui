@@ -21,6 +21,20 @@ const product: ProductType = {
   },
 };
 
+export const generateMetadata = async ({
+  params,
+}: {
+  params: Promise<{ id: string }>;
+}) => {
+  const { id } = await params;
+  // Fetch product data based on the ID (using the temporary product for now)
+  // In a real application, you would fetch the product details from an API or database
+  return {
+    title: `${product.name} - Trendy Threads`,
+    description: product.shortDescription,
+  };
+};
+
 const ProductPage = async ({
   params,
   searchParams,
