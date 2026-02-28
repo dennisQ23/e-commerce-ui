@@ -99,6 +99,22 @@ const SingleUserPage = () => {
               </HoverCard>
             </div>
           </div>
+          {/* User Card Container */}
+          <div className="bg-primary-foreground p-4 rounded-lg space-y-2">
+            <div className="flex items-center gap-2">
+              <Avatar className="size-12">
+                <AvatarImage
+                  src="https://github.com/shadcn.png"
+                  alt="@shadcn"
+                />
+                <AvatarFallback>JD</AvatarFallback>
+              </Avatar>
+              <h1 className="text-2xl font-bold mt-2">John Doe</h1>
+            </div>
+            <p className="text-sm text-muted-foreground">
+              Software Engineer at Example Inc.
+            </p>
+          </div>
           {/* Information Container */}
           <div className="bg-primary-foreground p-4 rounded-lg">
             <div className="flex item-center justify-between">
@@ -117,8 +133,8 @@ const SingleUserPage = () => {
               <Progress value={66} />
             </div>
             <div className="flex items-center gap-2">
-              <span className="text-smm text-muted-foreground">Username:</span>
-              <span>john_doe</span>
+              <span className="text-smm text-muted-foreground">Full Name:</span>
+              <span>John Doe</span>
             </div>
             <div className="flex items-center gap-2">
               <span className="text-smm text-muted-foreground">Email:</span>
@@ -129,40 +145,28 @@ const SingleUserPage = () => {
               <span>(123) 456-7890</span>
             </div>
             <div className="flex items-center gap-2">
-              <span className="text-smm text-muted-foreground">Location:</span>
-              <span>New York, NY</span>
+              <span className="text-smm text-muted-foreground">Address:</span>
+              <span>123 Main Street, Apt 4B</span>
             </div>
             <div className="flex items-center gap-2">
+              <span className="text-smm text-muted-foreground">City:</span>
+              <span>New York, NY</span>
+            </div>
+            {/* <div className="flex items-center gap-2">
               <span className="text-smm text-muted-foreground">Role:</span>
               <Badge>Admin</Badge>
-            </div>
+            </div> */}
             <p className="text-sm text-muted-foreground mt-4">
               Joined on 01/01/2023
             </p>
           </div>
           {/* Card List Container */}
-          <div className="bg-primary-foreground p-4 rounded-lg">
+          {/* <div className="bg-primary-foreground p-4 rounded-lg">
             <CardList title="Recent Transactions" />
-          </div>
+          </div> */}
         </div>
         {/* Right */}
         <div className="w-full xl:w-2/3 space-y-6">
-          {/* User Card Container */}
-          <div className="bg-primary-foreground p-4 rounded-lg space-y-2">
-            <div className="flex items-center gap-2">
-              <Avatar className="size-12">
-                <AvatarImage
-                  src="https://github.com/shadcn.png"
-                  alt="@shadcn"
-                />
-                <AvatarFallback>JD</AvatarFallback>
-              </Avatar>
-              <h1 className="text-2xl font-bold mt-2">John Doe</h1>
-            </div>
-            <p className="text-sm text-muted-foreground">
-              Software Engineer at Example Inc.
-            </p>
-          </div>
           {/* Chart Container */}
           <div className="bg-primary-foreground p-4 rounded-lg">
             <div>

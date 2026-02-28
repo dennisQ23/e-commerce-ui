@@ -52,22 +52,14 @@ const formSchema = z.object({
   // role: z.enum(["user", "admin"]),
 });
 
-const EditUser = () => {
+const AddUser = () => {
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
-    defaultValues: {
-      fullName: "John Doe",
-      email: "dYq0X@example.com",
-      phone: "1234567890",
-      address: "123 Main Street, Apt 4B",
-      city: "New York, NY",
-      // role: "user",
-    },
   });
   return (
     <SheetContent>
       <SheetHeader>
-        <SheetTitle className="mb-4">Edit User</SheetTitle>
+        <SheetTitle className="mb-4">Add User</SheetTitle>
         <SheetDescription>
           <Form {...form}>
             <form className="space-y-8">
@@ -162,30 +154,6 @@ const EditUser = () => {
                   </FormItem>
                 )}
               />
-              {/* <FormField
-                control={form.control}
-                name="role"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>Role</FormLabel>
-                    <FormControl>
-                      <Select>
-                        <SelectTrigger className="w-full">
-                          <SelectValue placeholder="Select a role" />
-                        </SelectTrigger>
-                        <SelectContent>
-                          <SelectItem value="user">User</SelectItem>
-                          <SelectItem value="admin">Admin</SelectItem>
-                        </SelectContent>
-                      </Select>
-                    </FormControl>
-                    <FormDescription>
-                      Only verified users can be admin.{" "}
-                    </FormDescription>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              /> */}
               <Button type="submit">Submit</Button>
             </form>
           </Form>
@@ -195,4 +163,4 @@ const EditUser = () => {
   );
 };
 
-export default EditUser;
+export default AddUser;
