@@ -93,8 +93,8 @@ const formSchema = z.object({
     .max(100, { message: "Description must be at most 100 characters" }),
   price: z.number().min(1, { message: "Price is required" }),
   category: z.enum(categories, { message: "Category is required" }),
-  colors: z.enum(colors, { message: "Color is required" }),
-  sizes: z.enum(sizes, { message: "Size is required" }),
+  colors: z.array(z.enum(colors, { message: "Color is required" })),
+  sizes: z.array(z.enum(sizes, { message: "Size is required" })),
   images: z.record(z.enum(colors), z.string()),
 });
 
